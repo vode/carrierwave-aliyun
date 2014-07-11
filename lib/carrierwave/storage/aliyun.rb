@@ -48,6 +48,8 @@ module CarrierWave
             "Authorization" => auth_sign,
             "Content-Type" => content_type,
             "Content-Length" => file.size,
+            "Cache-Control" => 'max-age=315360000',
+            "Expires" => 'Thu, 31 Dec 2037 23:55:55 GMT',
             "Date" => date,
             "Host" => @aliyun_upload_host,
             "Expect" => "100-Continue"
