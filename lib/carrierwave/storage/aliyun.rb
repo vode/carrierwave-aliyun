@@ -52,6 +52,7 @@ module CarrierWave
             "Expires" => 'Thu, 31 Dec 2037 23:55:55 GMT',
             "Date" => date,
             "Host" => @aliyun_upload_host,
+            "Access-Control-Allow-Origin"=> '*',
             "Expect" => "100-Continue"
           }
           RestClient.put(URI.encode(url), file, headers)
