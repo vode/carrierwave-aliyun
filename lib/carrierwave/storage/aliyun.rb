@@ -143,7 +143,7 @@ module CarrierWave
           @path = path
           @base = base
         end
-        def extention
+        def extension
           @path.gsub(/\.[A-Za-z]{3,4}$/)
         end
         ##
