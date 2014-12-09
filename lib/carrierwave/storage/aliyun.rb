@@ -143,7 +143,9 @@ module CarrierWave
           @path = path
           @base = base
         end
-
+        def extention
+          @path.gsub(/\.[A-Za-z]{3,4}$/)
+        end
         ##
         # Returns the current path/filename of the file on Cloud Files.
         #
